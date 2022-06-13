@@ -11,6 +11,12 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
+        /*
+            ambil instance action barnya dulu trus cek null apa ga
+            abis itu panggil function hide()
+         */
+        supportActionBar?.hide()
+
         val startButton = findViewById<Button>(R.id.start_btn)
         startButton.setOnClickListener(this)
     }

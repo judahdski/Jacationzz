@@ -1,4 +1,4 @@
-package com.d3if0002.jacationzz
+package com.d3if0002.jacationzz.adapter
 
 import android.net.Uri
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.d3if0002.jacationzz.R
 import com.d3if0002.jacationzz.model.Place
 
 class LinearListAdapter(private val placeList: ArrayList<Place>) : RecyclerView.Adapter<LinearListAdapter.LinearViewHolder>() {
