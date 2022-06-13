@@ -2,4 +2,6 @@
     <string name="app_name">Jacationzz</string>
     <string name="my_name">Judah Joshua Martin Dasuki</string>
     <string name="my_email">judahdasuki93@gmail.com</string>
+    <string name="get_started_btn">Get Started</string>
+    <string name="get_started_display">Find the place of your dreams</string>
 </resources>
