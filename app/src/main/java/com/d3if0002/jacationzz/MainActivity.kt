@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.d3if0002.jacationzz.adapter.GridListAdapter
 import com.d3if0002.jacationzz.adapter.LinearListAdapter
 import com.d3if0002.jacationzz.data.PlacesData
 import com.d3if0002.jacationzz.model.Place
@@ -57,8 +58,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun chooseLayout() {
-        if (isLinearLayoutManager) Toast.makeText(this, "isLinearLayoutManager : $isLinearLayoutManager", Toast.LENGTH_SHORT).show()
-        else Toast.makeText(this, "isLinearLayoutManager : $isLinearLayoutManager", Toast.LENGTH_SHORT).show()
+        if (isLinearLayoutManager) showLinearList()
+        else showGridList()
     }
 
     private fun showLinearList() {
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showGridList() {
         rv.layoutManager = GridLayoutManager(this, 2)
-        val gridAdapter = null
-//        rv.adapter
+        val gridAdapter = GridListAdapter(placeList)
+        rv.adapter = gridAdapter
     }
 }

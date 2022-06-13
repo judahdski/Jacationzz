@@ -11,14 +11,15 @@ import com.bumptech.glide.Glide
 import com.d3if0002.jacationzz.R
 import com.d3if0002.jacationzz.model.Place
 
-class LinearListAdapter(private val placeList: ArrayList<Place>) : RecyclerView.Adapter<LinearListAdapter.LinearViewHolder>() {
+class LinearListAdapter(private val placeList: ArrayList<Place>) :
+    RecyclerView.Adapter<LinearListAdapter.LinearViewHolder>() {
     class LinearViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var linearImage: ImageView
         var linearTitle: TextView
         var linearSubTitle: TextView
 
         init {
-            linearImage = itemView.findViewById(R.id.thumbnail_pic)
+            linearImage = itemView.findViewById(R.id.thumbnail_pic_linear)
             linearTitle = itemView.findViewById(R.id.linear_title)
             linearSubTitle = itemView.findViewById(R.id.linear_sub_title)
         }
@@ -36,6 +37,7 @@ class LinearListAdapter(private val placeList: ArrayList<Place>) : RecyclerView.
 
         Glide.with(holder.itemView.context)
             .load(Uri.parse(place.thumbnailPic))
+            .error(R.drawable.pexels_rachel_claire_4577707)
             .into(holder.linearImage)
 
         holder.linearTitle.text = place.name
