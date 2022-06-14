@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,6 +47,11 @@ class MainActivity : AppCompatActivity() {
                 isLinearLayoutManager = !isLinearLayoutManager
                 chooseLayout()
                 setIcon(item)
+                true
+            }
+            R.id.move_to_about -> {
+                val toAboutIntent = Intent(this, ProfileActivity::class.java)
+                startActivity(toAboutIntent)
                 true
             }
             else -> super.onOptionsItemSelected(item)

@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pexels_oleksandr_pidvalnyi_1172207" />
+        app:srcCompat="@drawable/foto_pribadi" />
 
     <TextView
         android:id="@+id/textView2"

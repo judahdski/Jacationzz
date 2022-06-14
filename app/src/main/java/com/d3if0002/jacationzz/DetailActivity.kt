@@ -84,6 +84,6 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun setActionBarTitle() {
-        actionBar?.title = place.name
+        supportActionBar?.title = place.name
     }
 }
