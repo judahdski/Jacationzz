@@ -25,6 +25,7 @@ class StartActivity : AppCompatActivity(), View.OnClickListener {
         if (p0?.id == R.id.start_btn) {
             val intent = Intent(this@StartActivity, MainActivity::class.java)
             this.startActivity(intent)
+            finish()
         }
     }
 }

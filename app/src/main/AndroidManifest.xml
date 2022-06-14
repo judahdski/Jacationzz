@@ -16,23 +16,28 @@
         android:theme="@style/Theme.Jacationzz"
         tools:targetApi="31">
 
-        <!--    S t a r t  A c t i v i t y    -->
+        <!-- S p l a s h  S c r e e n -->
         <activity
-            android:name=".StartActivity"
+            android:name=".Splash"
+            android:theme="@style/SplashTheme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!--    M a i n  A c t i v i t y    -->
+        <!-- S t a r t  A c t i v i t y -->
+        <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+
+        <!-- M a i n  A c t i v i t y -->
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
 
-        <!--    P r o f i l e  A c t i v i t y    -->
+        <!-- P r o f i l e  A c t i v i t y -->
         <activity
             android:name=".ProfileActivity"
             android:exported="false"
@@ -44,7 +49,7 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <!--    D e t a i l  A c t i v i t y    -->
+        <!-- D e t a i l  A c t i v i t y -->
         <activity
             android:name=".DetailActivity"
             android:exported="false"
@@ -56,10 +61,11 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <!--    Font    -->
+
+        <!-- Font -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
+
 </manifest>

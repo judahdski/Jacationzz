@@ -92,9 +92,10 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/go_to_google_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginVertical="8dp"
-        android:text="Share" />
+        android:text="@string/see_more" />
 </LinearLayout>
