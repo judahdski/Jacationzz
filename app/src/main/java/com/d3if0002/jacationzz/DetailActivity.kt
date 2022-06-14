@@ -18,6 +18,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         getPlaceInfo()
+        setActionBarTitle()
         setUI()
     }
 
@@ -43,5 +44,9 @@ class DetailActivity : AppCompatActivity() {
     private fun getPlaceInfo() {
         val id = intent.getLongExtra(MainActivity.PLACE_ID, 0L)
         place = PlacesData.getPlace(id)
+    }
+
+    private fun setActionBarTitle() {
+        actionBar?.title = place.name
     }
 }
