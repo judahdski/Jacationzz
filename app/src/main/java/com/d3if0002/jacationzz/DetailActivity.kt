@@ -38,7 +38,14 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.share_btn) {
-            Toast.makeText(this, "Shared", Toast.LENGTH_SHORT).show()
+            val sendIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TEXT, place.link)
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
 
             return true
         }
@@ -63,10 +70,10 @@ class DetailActivity : AppCompatActivity() {
         location.text = place.location
         rating.text = place.rating.toString()
         description.text = place.description
-        seeMoreBtn.setOnClickListener { searchOnGoogle(place.name) }
+        seeMoreBtn.setOnClickListener { searchOnGoogle("${place.name} ${place.location}") }
     }
 
-    fun searchOnGoogle(nama: String) {
+    private fun searchOnGoogle(nama: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(BASE_URL+nama))
         startActivity(intent)
     }

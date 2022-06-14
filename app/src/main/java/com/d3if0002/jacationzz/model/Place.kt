@@ -7,5 +7,6 @@ data class Place(
     var name: String = "",
     var location: String = "",
     var rating: Double = 0.0,
-    var description: String = ""
+    var description: String = "",
+    var link: String = ""
 )

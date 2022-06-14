@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,7 +14,7 @@
         <ImageView
             android:id="@+id/hero_pic"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/pexels_oleksandr_pidvalnyi_1172207" />
@@ -24,8 +25,8 @@
             android:background="#52000000"
             android:gravity="bottom"
             android:orientation="vertical"
-            android:paddingHorizontal="10dp"
-            android:paddingBottom="16dp">
+            android:paddingHorizontal="14dp"
+            android:paddingBottom="18dp">
 
             <!--        Place name        -->
             <TextView
@@ -47,11 +48,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:layout_marginEnd="16dp"
-                    android:drawableStart="@drawable/ic_location"
                     android:drawablePadding="6dp"
-                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                     android:textColor="@color/white"
-                    tools:text="Locations" />
+                    tools:text="Locations"
+                    app:drawableStartCompat="@drawable/ic_location" />
 
                 <!--        Rating        -->
                 <TextView
@@ -60,11 +61,11 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@id/loc_text"
                     android:layout_toEndOf="@+id/loc_text"
-                    android:drawableStart="@drawable/ic_star"
                     android:drawablePadding="6dp"
-                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                     android:textColor="@color/white"
-                    tools:text="Rating" />
+                    tools:text="Rating"
+                    app:drawableStartCompat="@drawable/ic_star" />
             </RelativeLayout>
         </LinearLayout>
     </FrameLayout>
@@ -79,7 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             android:text="@string/description" />
 
         <!--    Description    -->
