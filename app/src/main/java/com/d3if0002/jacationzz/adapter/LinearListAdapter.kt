@@ -13,6 +13,13 @@ import com.d3if0002.jacationzz.model.Place
 
 class LinearListAdapter(private val placeList: ArrayList<Place>) :
     RecyclerView.Adapter<LinearListAdapter.LinearViewHolder>() {
+
+    private lateinit var clickCallback: ClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: ClickCallback) {
+        this.clickCallback = onItemClickCallback
+    }
+
     class LinearViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var linearImage: ImageView
         var linearTitle: TextView
@@ -42,7 +49,13 @@ class LinearListAdapter(private val placeList: ArrayList<Place>) :
 
         holder.linearTitle.text = place.name
         holder.linearSubTitle.text = place.location
+
+        holder.itemView.setOnClickListener { clickCallback.onItemClickCallback(place) }
     }
 
     override fun getItemCount() = placeList.size
+
+    interface ClickCallback {
+        fun onItemClickCallback(data: Place)
+    }
 }

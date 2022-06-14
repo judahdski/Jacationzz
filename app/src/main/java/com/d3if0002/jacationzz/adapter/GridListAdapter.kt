@@ -8,11 +8,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.d3if0002.jacationzz.MainActivity
 import com.d3if0002.jacationzz.R
 import com.d3if0002.jacationzz.model.Place
 
 class GridListAdapter(private val placeList: ArrayList<Place>) :
     RecyclerView.Adapter<GridListAdapter.GridViewHolder>() {
+
+    private lateinit var clickCallback: ClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: ClickCallback) {
+        this.clickCallback = onItemClickCallback
+    }
+
     class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var gridImage: ImageView
         var gridTitle: TextView
@@ -42,7 +50,13 @@ class GridListAdapter(private val placeList: ArrayList<Place>) :
 
         holder.gridTitle.text = place.name
         holder.gridSubTitle.text = place.location
+
+        holder.itemView.setOnClickListener { clickCallback.onItemClickCallback(place) }
     }
 
     override fun getItemCount() = placeList.size
+
+    interface ClickCallback {
+        fun onItemClickCallback(data: Place)
+    }
 }

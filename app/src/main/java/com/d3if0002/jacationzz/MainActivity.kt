@@ -2,9 +2,7 @@ package com.d3if0002.jacationzz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -66,11 +64,27 @@ class MainActivity : AppCompatActivity() {
         rv.layoutManager = LinearLayoutManager(this)
         val linearAdapter = LinearListAdapter(placeList)
         rv.adapter = linearAdapter
+
+        linearAdapter.setOnItemClickCallback(object : LinearListAdapter.ClickCallback {
+            override fun onItemClickCallback(data: Place) {
+                moveToDetail(data)
+            }
+        })
     }
 
     private fun showGridList() {
         rv.layoutManager = GridLayoutManager(this, 2)
         val gridAdapter = GridListAdapter(placeList)
         rv.adapter = gridAdapter
+
+        gridAdapter.setOnItemClickCallback(object : GridListAdapter.ClickCallback {
+            override fun onItemClickCallback(data: Place) {
+                moveToDetail(data)
+            }
+        })
+    }
+
+    fun moveToDetail(place: Place) {
+        Toast.makeText(this, "pindah ke detail dari ${place.name}", Toast.LENGTH_SHORT).show()
     }
 }
