@@ -11,6 +11,10 @@ object PlacesData {
         "https://wallpapercave.com/wp/CPeQsAv.jpg",
         "https://p4.wallpaperbetter.com/wallpaper/724/198/515/peter-rock-petra-desert-wallpaper-preview.jpg",
         "https://wallpaperaccess.com/full/1454779.jpg",
+        "https://images.alphacoders.com/568/thumb-1920-568664.jpg",
+        "https://images.alphacoders.com/102/1027379.jpg",
+        "https://c4.wallpaperflare.com/wallpaper/644/828/996/the-sun-rays-light-island-wallpaper-preview.jpg",
+        "https://w0.peakpx.com/wallpaper/643/148/HD-wallpaper-christ-the-redeemer-brazil-rio-skyline-statue.jpg"
     )
 
     private val heroPics = arrayOf(
@@ -21,6 +25,10 @@ object PlacesData {
         "https://wallpapercave.com/wp/CPeQsAv.jpg",
         "https://c4.wallpaperflare.com/wallpaper/246/806/550/nature-landscape-desert-sand-wallpaper-preview.jpg",
         "https://images5.alphacoders.com/594/594362.jpg",
+        "https://wallpapercave.com/wp/wp5744399.jpg",
+        "https://images7.alphacoders.com/415/415497.jpg",
+        "https://images8.alphacoders.com/423/423610.jpg",
+        "https://cdn.suwalls.com/wallpapers/world/christ-the-redeemer-37573-2880x1800.jpg"
     )
 
     private val names = arrayOf(
@@ -30,7 +38,11 @@ object PlacesData {
         "The Acropolis",
         "Great Pyramid of Giza",
         "Petra",
-        "The Louvre"
+        "The Louvre",
+        "Grand Canyon",
+        "Stonehenge",
+        "Borobudur",
+        "Corcovado and Cristo Redentor"
     )
 
     private val locations = arrayOf(
@@ -40,16 +52,24 @@ object PlacesData {
         "Athens, Attica, Greece",
         "Egypt",
         "Ma'an Governorate, Jordan",
-        "Paris, France"
+        "Paris, France",
+        "Arizona, USA",
+        "Wiltshire, England",
+        "Middle Java, Indonesia",
+        "Rio de Janeiro, Brazil"
     )
 
     private val ratings = arrayOf(
-        4.8,
+        4.7,
         4.5,
         4.1,
         4.3,
         3.9,
         4.6,
+        4.2,
+        4.8,
+        4.0,
+        4.1,
         4.2
     )
 
@@ -65,6 +85,26 @@ object PlacesData {
         """
             The Louvre (English: /ˈluːv(rə)/ LOOV(-rə)), or the Louvre Museum (French: Musée du Louvre [myze dy luvʁ] (listen)), is the world's most-visited museum, and a historic landmark in Paris, France. It is the home of some of the best-known works of art, including the Mona Lisa and the Venus de Milo. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement (district or ward). At any given point in time, approximately 38,000 objects from prehistory to the 21st century are being exhibited over an area of 72,735 square meters (782,910 square feet). Attendance in 2021 was 2.8 million due to the COVID-19 pandemic. The museum was closed for 150 days in 2020, and attendance plunged by 72 percent to 2.7 million. Nonetheless, the Louvre still topped the list of most-visited art museums in the world in 2021.
         The museum is housed in the Louvre Palace, originally built in the late 12th to 13th century under Philip II. Remnants of the Medieval Louvre fortress are visible in the basement of the museum. Due to urban expansion, the fortress eventually lost its defensive function, and in 1546 Francis I converted it into the primary residence of the French Kings. The building was extended many times to form the present Louvre Palace. In 1682, Louis XIV chose the Palace of Versailles for his household, leaving the Louvre primarily as a place to display the royal collection, including, from 1692, a collection of ancient Greek and Roman sculpture. In 1692, the building was occupied by the Académie des Inscriptions et Belles-Lettres and the Académie Royale de Peinture et de Sculpture, which in 1699 held the first of a series of salons. The Académie remained at the Louvre for 100 years. During the French Revolution, the National Assembly decreed that the Louvre should be used as a museum to display the nation's masterpieces.
+        """.trimIndent(),
+        """
+            The greatest natural attraction in the United States, the Grand Canyon is a key sight for all travelers planning their lifetime of adventures. Standing on the rim of the Grand Canyon, looking out over the carved landscape, will awaken your senses.
+        Several hikes in the canyon and along the rim offer unique perspectives. Walk even a short distance down the Bright Angel trail to gain additional views and to experience what the canyon is like below the rim.
+        For even more adventure plan a rafting trip down the Colorado River through the canyon.
+        The Grand Canyon looks different throughout the day and at different times of the year. One trip is never enough. If you are going to add this place to your to-see list, consider what you want to do here to determine the best time to visit.
+        """.trimIndent(),
+        """
+            Stonehenge is one of those places that makes you ponder what went on here over 4,500 years ago. It's long been a mystery to historians, and has captured the imagination of countless visitors. Despite the large number of tourists that descend on Stonehenge, the place still has a mystical feel.
+        At the site, giant stones, some standing, some fallen, are set in two roughly circular patterns that are oriented to highlight the summer and winter solstices. For a truly memorable experience, plan your visit during one of these times.
+        An easy day trip from London, Stonehenge can easily be worked into your UK itinerary.
+        """.trimIndent(),
+        """
+            Set in a steamy jungle with three volcanoes providing the backdrop, Borobudur is Indonesia's top tourist attraction.
+        Borobudur dates from the 9th century and is one of the largest Buddhist temples in the world. It's a fascinating place to wander about. Over 500 Buddhas are spread around the site, some of which sit under ornate stupas.
+        Try to visit early in the morning when you'll have the best chance of experiencing a bit of early mist, and the view to the volcanoes will be the clearest.
+        """.trimIndent(),
+        """
+            Keeping a watchful eye over the citizens of Rio de Janeiro from his perch atop Corcovado mountain is the stunning statue of Cristo Redentor. This huge 30-meter-high statue with its arms wide open in a welcoming gesture has been one of Rio's top tourist attractions since 1931.
+        The harbor of Rio de Janeiro is one of the 7 natural wonders of the world. The views from the top of the 709-meter Corcovado look out over this beautiful sight, including Sugarloaf Mountain and the city perfectly poised for beautiful photographs. The best way to get to the top is a ride up through the forests of the Tijuca National Park on the 3.5-kilometer Corcovado Rack Railway.
         """.trimIndent()
     )
 
@@ -76,6 +116,10 @@ object PlacesData {
         "https://www.britannica.com/topic/Pyramids-of-Giza",
         "https://whc.unesco.org/en/list/326/",
         "https://www.louvre.fr/en",
+        "https://www.nps.gov/grca/index.htm",
+        "https://www.stonehenge.co.uk/",
+        "https://borobudurpark.com/en/home-2/",
+        "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
     )
 
     val listDestinations: ArrayList<Place>
