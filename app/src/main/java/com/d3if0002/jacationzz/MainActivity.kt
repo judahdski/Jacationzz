@@ -1,5 +1,6 @@
 package com.d3if0002.jacationzz
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -15,6 +16,11 @@ import com.d3if0002.jacationzz.data.PlacesData
 import com.d3if0002.jacationzz.model.Place
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val PLACE_ID = "place_id"
+    }
+
     private lateinit var rv: RecyclerView
     var placeList: ArrayList<Place> = arrayListOf()
     private var isLinearLayoutManager = true
@@ -85,6 +91,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun moveToDetail(place: Place) {
-        Toast.makeText(this, "pindah ke detail dari ${place.name}", Toast.LENGTH_SHORT).show()
+        val moveToDetailIntent = Intent(this, DetailActivity::class.java)
+        moveToDetailIntent.putExtra(PLACE_ID, place.id)
+        startActivity(moveToDetailIntent)
     }
 }

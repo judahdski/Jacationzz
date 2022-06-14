@@ -77,4 +77,13 @@ object PlacesData {
 
             return list
         }
+
+    fun getPlace(id: Long): Place {
+        var place = Place()
+
+        for (destination in listDestinations)
+            if (destination.id == id) destination.also { place = it }
+
+        return place
+    }
 }
