@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.d3if0002.jacationzz">
+    package="com.d3if0002.jacationzz" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -9,60 +9,50 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jacationzz"
-        tools:targetApi="31">
-
+        tools:targetApi="31" >
         <!-- S p l a s h  S c r e e n -->
         <activity
-            android:name=".Splash"
-            android:theme="@style/SplashTheme"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- S t a r t  A c t i v i t y -->
         <activity
             android:name=".StartActivity"
             android:exported="false" />
-
-        <!-- M a i n  A c t i v i t y -->
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
-        <!-- P r o f i l e  A c t i v i t y -->
         <activity
             android:name=".ProfileActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
 
             <!-- biar support android 4.0 ke bawah -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <!-- D e t a i l  A c t i v i t y -->
         <activity
             android:name=".DetailActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
 
             <!-- biar support android 4.0 ke bawah -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
-        <!-- Font -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
